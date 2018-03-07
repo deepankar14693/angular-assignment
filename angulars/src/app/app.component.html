@@ -1,0 +1,18 @@
+<p [appHighlight]="name">{{name}}</p>
+
+<!--<input [(ngModel)]="name">-->
+<p *ngIf="toggle">NG IF</p>
+
+<p style="color: #ff82aa">hello</p>
+
+<button (click)="change()">click</button>
+
+<login-app (submitName)="showName($event)" [firstName]="name"></login-app>
+
+<app-signup></app-signup>
+
+<router-outlet></router-outlet>
+<!--<input type="button" routerLink="login">login</input>-->
+<!--<input type="button" routerLink="signup">Sign-Up</input>-->
+<!--<button (click)="goTo('login')">login</button>-->
+<!--<button (click)="goTo('signup')">login</button>-->

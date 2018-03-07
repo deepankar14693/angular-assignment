@@ -1,0 +1,16 @@
+<form #loginForm="ngForm" (submit)="submitUser()">
+  <!--welcome {{firstName}}-->
+<!--<button (click)="submitForm()">click</button>-->
+<input #email="ngModel" name="email" type="text" required [(ngModel)]="user.email"/><br>
+  <div style="color: red;" [hidden]="email.valid || email.pristine">invalid</div>
+  <!--<div *ngIf = email.invalid> email is invalid</div>-->
+  <!--touched : {{email.touched}}<br>-->
+  <!--untouched : {{email.untouched}}<br>-->
+  <!--valid : {{email.valid}}<br>-->
+  <!--invalid : {{email.invalid}}<br>-->
+  <!--dirty : {{email.dirty}}<br>-->
+  <!--pristine : {{email.pristine}}<br>-->
+
+  <input #pass="ngModel" name="password" type="password" required [(ngModel)]="user.password"><br>
+  <button disabled="loginForm.invalid" type="submit">login</button>
+</form>
